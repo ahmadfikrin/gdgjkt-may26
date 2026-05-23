@@ -44,9 +44,9 @@ async def serve_dashboard(request: Request):
     """
     kb_meta = engine.get_kb_metadata()
     return templates.TemplateResponse(
-        "index.html",
-        {
-            "request": request,
+        request=request,
+        name="index.html",
+        context={
             "last_sync": kb_meta["last_sync"],
             "total_count": kb_meta["total_count"]
         }

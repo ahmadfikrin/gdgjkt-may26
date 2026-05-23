@@ -6,7 +6,7 @@ Repositori ini berisi implementasi lengkap untuk **Peran 2 (Fact-Checking Engine
 
 ---
 
-## 🚀 Fitur Utama (Peran 2)
+## 🚀 Fitur Utama
 
 1. **Penerimaan Input Multi-Format (Input Handling)**:
    * **Pembersihan Teks & Normalisasi**: Menghapus tanda baca, konversi huruf kecil, dan menyaring *stop-words* Bahasa Indonesia untuk mendeteksi esensi utama klaim.

@@ -1,66 +1,46 @@
 {
-    "last_sync": "2026-05-23 15:56:50",
-    "total_count": 6,
+    "last_sync": "2026-05-23 16:24:09",
+    "total_count": 4,
     "issues": [
         {
             "id": 1,
-            "title": "Jakarta Libur Nasional karena Pemilu Susulan 24 Mei 2026",
-            "claim": "Besok tanggal 24 Mei 2026 Jakarta akan libur nasional karena diadakannya pemilu susulan pilkada.",
+            "title": "[HOAKS] Komdigi Akan Nonaktifkan Media Sosial pada 28 Maret 2026",
+            "claim": "Beredar unggahan di media sosial yang mengklaim bahwa pada **28 Maret 2026**, pemerintah melalui Kementerian Komunikasi dan Digital (Komdigi) akan **menonaktifkan seluruh platform media sosial** seperti TikTok, Instagram, Facebook, dan YouTube sehingga masyarakat tidak dapat mengaksesnya.",
             "status": "🛑 HOAX",
-            "confidence": 98,
-            "explanation": "Kementerian Ketenagakerjaan menyatakan tidak ada keputusan presiden mengenai libur nasional pada tanggal 24 Mei 2026. Pemilu susulan hanya diadakan di TPS tertentu dan tidak meliburkan provinsi Jakarta secara keseluruhan.",
-            "source": "https://www.komdigi.go.id/berita/berita-hoaks",
-            "category": "Pemerintahan"
+            "confidence": 95,
+            "explanation": "Klaim tersebut **tidak benar**. Kebijakan yang berlaku mulai 28 Maret 2026 adalah implementasi **PP TUNAS (PP Nomor 17 Tahun 2025)** tentang Tata Kelola Penyelenggaraan Sistem Elektronik dalam Perlindungan Anak, yang diatur lebih lanjut dalam **Peraturan Menteri Komdigi Nomor 9 Tahun 2026**.\n\nKebijakan tersebut **hanya menonaktifkan akun pengguna berusia di bawah 16 tahun** pada platform digital berisiko tinggi — bukan menutup atau mematikan platform media sosial secara keseluruhan.",
+            "source": "https://pusiknas.polri.go.id/detail_artikel/komdigi_disebut_akan_nonaktifkan_media_sosial,_polri:_hoaks",
+            "category": "Kebijakan Pemerintah"
         },
         {
             "id": 2,
-            "title": "Bantuan Sosial Tunai 10 Juta Rupiah melalui Link Telegram",
-            "claim": "Pemerintah membagikan bantuan sosial tunai sebesar 10 juta rupiah bagi yang bergabung ke grup Telegram ini.",
+            "title": "[HOAKS] Tautan Pendaftaran CPNS 2026 Resmi Dibuka",
+            "claim": "Beredar postingan di media sosial (Facebook, TikTok) yang mengklaim terdapat **tautan resmi pendaftaran CPNS 2026** dengan narasi seperti:\n\n*\"RESMI DIBUKA PENDAFTARAN CPNS, LULUSAN SMA D3 S1 PENEMPATAN DI SELURUH WILAYAH INDONESIA\"*\n\nTautan tersebut mengarah ke formulir digital yang meminta data pribadi seperti **nama sesuai KTP, nomor telepon, hingga nomor Telegram**.",
             "status": "🛑 HOAX",
-            "confidence": 95,
-            "explanation": "Kementerian Sosial menegaskan bahwa penyaluran BST hanya dilakukan melalui PT Pos Indonesia dan Himbara. Tidak ada pendaftaran bansos melalui link grup Telegram atau WhatsApp informal.",
-            "source": "https://www.komdigi.go.id/berita/berita-hoaks",
-            "category": "Sosial & Ekonomi"
+            "confidence": 98,
+            "explanation": "Klaim ini **tidak benar dan berpotensi penipuan (phishing)**. Hingga saat ini pemerintah **belum mengeluarkan pengumuman resmi** terkait seleksi CPNS 2026.\n\nPendaftaran CPNS **hanya dilakukan melalui portal resmi**:\n- **SSCASN BKN**: [https://sscasn.bkn.go.id/](https://sscasn.bkn.go.id)\n\nTautan yang beredar di media sosial bertujuan **mencuri data pribadi** pengguna. Masyarakat diminta tidak mengklik atau mengisi formulir dari sumber tidak resmi.",
+            "source": "https://www.liputan6.com/cek-fakta/read/6278160/deretan-hoaks-cpns-2026-yang-beredar-di-media-sosial-simak-faktanya",
+            "category": "Penipuan Digital / Phishing"
         },
         {
             "id": 3,
-            "title": "Vaksin Booster Mengandung Chip Magnetik Pelacak",
-            "claim": "Vaksin booster mengandung chip magnetik kecil untuk melacak pergerakan warga.",
-            "status": "🛑 HOAX",
-            "confidence": 99,
-            "explanation": "Kementerian Kesehatan dan WHO menegaskan kandungan vaksin sepenuhnya berisi bahan aktif antigen dan bahan penstabil standar medis. Logam magnetik atau mikrochip pelacak tidak mungkin dimasukkan ke dalam jarum suntik vaksin.",
-            "source": "https://turnbackhoax.id/",
-            "category": "Kesehatan"
+            "title": "[SEBAGIAN BENAR] Tahun 2026 Rakyat Indonesia Akan Kehilangan Tanah Akibat Aturan Baru Pemerintah",
+            "claim": "Beredar narasi di media sosial yang mengklaim bahwa **aturan baru pemerintah pada 2026 akan menyebabkan rakyat Indonesia kehilangan tanah mereka**, seolah pemerintah dapat mengambil alih tanah milik rakyat secara sepihak.",
+            "status": "⚠️ SEBAGIAN BENAR / BELUM DAPAT DIPASTIKAN",
+            "confidence": 80,
+            "explanation": "Narasi ini **mendistorsi fakta**. Benar bahwa terdapat kebijakan baru terkait pertanahan pada 2026, namun klaim bahwa \"rakyat akan kehilangan tanah\" adalah **framing yang menyesatkan**.\n\n**Fakta yang benar:**\n- Pemerintah memang mengeluarkan kebijakan terkait **digitalisasi sertifikat tanah** dan pembaruan sistem agraria.\n- Kebijakan tersebut **tidak mengizinkan pengambilalihan tanah rakyat secara sepihak**.\n- Tanah yang berpotensi terdampak hanya tanah **tanpa sertifikat resmi atau dalam sengketa hukum** yang sudah berjalan lama.\n\n**Yang menyebabkan miskonsepsi:**\n- Narasi di media sosial menghilangkan konteks hukum dan mencampur adukkan beberapa regulasi berbeda seolah menjadi satu ancaman tunggal.",
+            "source": "https://www.komdigi.go.id/berita/berita-hoaks/detail/hoaks-tahun-2026-rakyat-indonesia-akan-kehilangan-tanah-akibat-aturan-baru-pemerintah",
+            "category": "Kebijakan Pertanahan"
         },
         {
             "id": 4,
-            "title": "Gempa Megathrust Guncang Selat Sunda Malam Ini Kekuatan 9.5 SR",
-            "claim": "Akan terjadi gempa bumi dahsyat megathrust di Selat Sunda berkekuatan 9.5 SR pada malam ini pukul 22.00 WIB.",
-            "status": "🛑 HOAX",
+            "title": "[FAKTA] Akun Media Sosial Pengguna di Bawah 16 Tahun Dinonaktifkan Mulai 28 Maret 2026",
+            "claim": "Beredar informasi bahwa mulai **28 Maret 2026**, pemerintah akan menonaktifkan akun media sosial pengguna berusia di bawah 16 tahun.",
+            "status": "✅ FAKTA",
             "confidence": 97,
-            "explanation": "BMKG menegaskan gempa bumi tidak dapat diprediksi secara tepat kapan waktu terjadinya. Prediksi waktu spesifik jam dan kekuatan gempa megathrust malam ini adalah hoaks dan disinformasi.",
-            "source": "https://turnbackhoax.id/",
-            "category": "Bencana Alam"
-        },
-        {
-            "id": 5,
-            "title": "Pendaftaran KIP Kuliah Tahun 2026 Resmi Dibuka Kemendikbudristek",
-            "claim": "Pendaftaran Kartu Indonesia Pintar Kuliah (KIP-Kuliah) tahun 2026 resmi dibuka mulai hari ini.",
-            "status": "✅ FAKTA",
-            "confidence": 95,
-            "explanation": "Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi mengumumkan secara resmi pembukaan KIP Kuliah bagi lulusan SMA/SMK sederajat berprestasi dari keluarga kurang mampu melalui portal kip-kuliah.kemdikbud.go.id.",
-            "source": "https://tirto.id/",
-            "category": "Pendidikan"
-        },
-        {
-            "id": 6,
-            "title": "Pendaftaran Beasiswa LPDP Tahap 1 Tahun 2026 Dibuka",
-            "claim": "Kementerian Keuangan resmi membuka pendaftaran beasiswa LPDP Tahap 1 tahun 2026 mulai kuartal pertama.",
-            "status": "✅ FAKTA",
-            "confidence": 96,
-            "explanation": "Lembaga Pengelola Dana Pendidikan (LPDP) resmi membuka seleksi pendaftaran program beasiswa Magister dan Doktor Tahap 1 tahun 2026 secara daring bagi seluruh warga negara Indonesia.",
-            "source": "https://tirto.id/",
-            "category": "Pendidikan"
+            "explanation": "Informasi ini **benar**. Kebijakan tersebut adalah bagian dari implementasi **PP TUNAS** (Peraturan Pemerintah Nomor 17 Tahun 2025 tentang Tata Kelola Penyelenggaraan Sistem Elektronik dalam Perlindungan Anak), yang diatur lebih lanjut oleh **Peraturan Menteri Komdigi Nomor 9 Tahun 2026**.\n\n**Detail kebijakan:**\n- Akun pengguna berusia **di bawah 16 tahun** pada platform digital berisiko tinggi akan dinonaktifkan.\n- Kebijakan ini berlaku mulai **28 Maret 2026**.\n- Tujuannya adalah menciptakan **ruang digital yang lebih aman bagi anak-anak**.\n- Platform media sosial secara keseluruhan **tidak dimatikan** — hanya akun pengguna di bawah umur.\n\n**Catatan penting:** Klaim ini sering **disalahpahami** sebagai \"seluruh media sosial dinonaktifkan\" — yang merupakan hoaks (lihat: hoaks-001).",
+            "source": "https://klinikhoaks.jatimprov.go.id/post/media-sosial-akan-dinonaktifkan-komdigi-pada-28-maret-2026-69b4e7a129460",
+            "category": "Kebijakan Perlindungan Anak Digital"
         }
     ]
 }

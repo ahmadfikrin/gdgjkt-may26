@@ -14,7 +14,7 @@ Repositori ini berisi implementasi lengkap untuk **Peran 2 (Fact-Checking Engine
    * **OCR (Optical Character Recognition)**: Integrasi dengan engine OCR (Tesseract) untuk membaca screenshot gambar, lengkap dengan hint cadangan pintar untuk kelancaran pengujian lokal.
 
 2. **Integrasi Basis Pengetahuan GitHub (Primary Knowledge Base)**:
-   * Mengambil data hoax dan fakta secara dinamis dari komentar repositori `https://github.com/anti-fitnah/gdgjkt-may26/issues/2` via API/Web Parser.
+   * Mengambil data hoax dan fakta secara dinamis dari komentar repositori `https://github.com/anti-fitnah/gdgjkt-may26/issues/6` via API/Web Parser.
    * Caching lokal cerdas dalam file `knowledge_base.json` untuk meningkatkan kecepatan respons di bawah 1 detik dan menghindari limitasi rate limit API GitHub.
 
 3. **Mesin Kemiripan Teks (Text Similarity Matcher)**:

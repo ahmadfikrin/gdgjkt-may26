@@ -145,7 +145,7 @@ async def verify_image(
 @app.post("/api/kb/sync")
 async def sync_knowledge_base():
     """
-    Endpoint untuk menyinkronkan database lokal dengan GitHub Issue #2.
+    Endpoint untuk menyinkronkan database lokal dengan GitHub Issue #6.
     """
     res = engine.sync_kb_from_github()
     kb_meta = engine.get_kb_metadata()

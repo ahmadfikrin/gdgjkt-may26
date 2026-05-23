@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti Fitnah · Fact-Checking Engine & Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="cyber-background"></div>
+    <div class="glow-sphere sphere-1"></div>
+    <div class="glow-sphere sphere-2"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="logo-area">
+                <div class="glowing-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                    <h1>ANTI FITNAH</h1>
+                    <p class="subtitle">Fact-Checking Engine & Data Integration Lead</p>
+                </div>
+            </div>
+            <div class="kb-meta-badge" id="kb-header-badge">
+                <i class="fa-solid fa-database"></i>
+                <span>Database Lokal: <strong id="header-total-count">{{ total_count }}</strong> Isu</span>
+            </div>
+        </header>
+
+        <!-- Main Workspace -->
+        <main class="grid-workspace">
+            
+            <!-- Left Panel: Input & Workspace -->
+            <section class="panel glass-panel input-panel">
+                <h2 class="panel-title"><i class="fa-solid fa-keyboard"></i> Ruang Kerja Pemeriksa Fakta</h2>
+                <p class="panel-desc">Pilih format masukan di bawah ini untuk memulai proses analisis informasi secara instan.</p>
+                
+                <!-- Tab Headers -->
+                <div class="tab-headers">
+                    <button class="tab-btn active" data-tab="text-tab">
+                        <i class="fa-solid fa-align-left"></i> Teks Klaim
+                    </button>
+                    <button class="tab-btn" data-tab="url-tab">
+                        <i class="fa-solid fa-link"></i> Tautan / Link
+                    </button>
+                    <button class="tab-btn" data-tab="image-tab">
+                        <i class="fa-solid fa-image"></i> Tangkapan Layar
+                    </button>
+                </div>
+
+                <!-- Tab Contents -->
+                <div class="tab-contents">
+                    
+                    <!-- 1. Text Tab -->
+                    <div class="tab-content active" id="text-tab">
+                        <div class="form-group">
+                            <label for="claim-text">Ketikkan Isu atau Klaim</label>
+                            <textarea id="claim-text" placeholder="Contoh: Apakah benar besok Jakarta akan libur nasional karena pilkada susulan?" rows="5"></textarea>
+                        </div>
+                        <button class="action-btn" id="verify-text-btn">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Jalankan Verifikasi
+                        </button>
+                    </div>
+
+                    <!-- 2. URL Tab -->
+                    <div class="tab-content" id="url-tab">
+                        <div class="form-group">
+                            <label for="claim-url">Tempelkan URL Media Sosial / Portal Berita</label>
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-globe"></i>
+                                <input type="url" id="claim-url" placeholder="https://x.com/username/status/123456" />
+                            </div>
+                            <p class="input-helper">Mendukung X/Twitter, Instagram, Facebook, dan situs portal berita resmi.</p>
+                        </div>
+                        <button class="action-btn" id="verify-url-btn">
+                            <i class="fa-solid fa-network-wired"></i> Ekstrak & Verifikasi
+                        </button>
+                    </div>
+
+                    <!-- 3. Image Tab -->
+                    <div class="tab-content" id="image-tab">
+                        <div class="form-group">
+                            <label>Unggah Gambar Tangkapan Layar (Screenshot)</label>
+                            <div class="drag-drop-area" id="image-drag-area">
+                                <input type="file" id="claim-image" accept="image/*" class="file-input" />
+                                <div class="drag-content">
+                                    <i class="fa-solid fa-cloud-arrow-up cloud-icon"></i>
+                                    <p class="drag-title">Seret & Lepas Gambar atau <span>Klik di Sini</span></p>
+                                    <p class="drag-info">Mendukung file PNG, JPG, JPEG (Maks. 5MB)</p>
+                                </div>
+                                <div class="image-preview-container" id="img-preview-box" style="display: none;">
+                                    <img id="img-preview" src="#" alt="Screenshot Preview" />
+                                    <button type="button" class="remove-img-btn" id="remove-img-btn"><i class="fa-solid fa-xmark"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group" id="ocr-hint-group">
+                            <label for="image-hint-text">Teks Hint untuk Simulasi OCR (Opsional)</label>
+                            <textarea id="image-hint-text" placeholder="Tuliskan isi teks gambar jika OCR Tesseract lokal tidak terpasang..." rows="2"></textarea>
+                            <p class="input-helper"><i class="fa-solid fa-circle-info"></i> Sistem kami akan secara cerdas memproses OCR secara real-time, tetapi Anda juga dapat memberikan arahan teks di sini.</p>
+                        </div>
+
+                        <button class="action-btn" id="verify-image-btn">
+                            <i class="fa-solid fa-eye"></i> Pindai OCR & Verifikasi
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Right Panel: Results & Analysis -->
+            <section class="panel glass-panel results-panel">
+                <h2 class="panel-title"><i class="fa-solid fa-chart-line"></i> Hasil Analisis & Kesimpulan</h2>
+                
+                <!-- Initial State (No query yet) -->
+                <div class="initial-state-box" id="result-initial">
+                    <div class="radar-scan">
+                        <i class="fa-solid fa-circle-dot"></i>
+                    </div>
+                    <h3>Menunggu Kueri Analisis</h3>
+                    <p>Masukkan klaim di panel sebelah kiri untuk melihat evaluasi persentase kebenaran fakta atau hoax.</p>
+                </div>
+
+                <!-- Loading State -->
+                <div class="loading-state-box" id="result-loading" style="display: none;">
+                    <div class="spinner-outer">
+                        <div class="spinner-inner"></div>
+                    </div>
+                    <h3>Sedang Memverifikasi Data</h3>
+                    <p id="loading-message">Mengakses basis data internal & menelusuri rujukan terpercaya...</p>
+                </div>
+
+                <!-- Final Verification Output (Hidden by default) -->
+                <div class="result-output-box" id="result-output" style="display: none;">
+                    
+                    <!-- Verdict Badge -->
+                    <div class="verdict-banner" id="verdict-banner">
+                        <span id="verdict-text">[ 🛑 HOAX ]</span>
+                    </div>
+
+                    <!-- Confidence Circle / Progress -->
+                    <div class="confidence-container">
+                        <div class="confidence-gauge">
+                            <svg viewBox="0 0 100 100" class="gauge-svg">
+                                <circle cx="50" cy="50" r="40" class="gauge-bg"></circle>
+                                <circle cx="50" cy="50" r="40" class="gauge-fill" id="gauge-fill-circle"></circle>
+                            </svg>
+                            <div class="gauge-text">
+                                <span class="percent-val" id="confidence-percentage">95%</span>
+                                <span class="percent-label">Tingkat Keyakinan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Info List -->
+                    <div class="verdict-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Isu Terdeteksi:</span>
+                            <strong class="detail-val" id="result-title">Jakarta Libur Nasional Pemilu</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Kategori Isu:</span>
+                            <span class="badge badge-category" id="result-category">Pemerintahan</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Mesin Penilai:</span>
+                            <span class="badge badge-engine" id="result-engine">Primary Knowledge Base (GitHub Issue #2)</span>
+                        </div>
+                    </div>
+
+                    <!-- Explanation -->
+                    <div class="explanation-box">
+                        <h4><i class="fa-solid fa-quote-left"></i> Penjelasan Resmi / Ringkasan Bantahan</h4>
+                        <p id="result-explanation">Kementerian Ketenagakerjaan menyatakan tidak ada keputusan presiden mengenai libur nasional pada tanggal tersebut.</p>
+                    </div>
+
+                    <!-- Reference Source -->
+                    <div class="source-link-box">
+                        <span class="source-label">Sumber Rujukan Utama:</span>
+                        <a href="#" target="_blank" id="result-source-url" class="source-link">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> <span id="result-source-text">Lihat Rilis Klarifikasi Resmi</span>
+                        </a>
+                    </div>
+
+                    <!-- Extra scraping meta if URL query -->
+                    <div class="scraped-meta-box" id="scraped-meta-box" style="display: none;">
+                        <h4><i class="fa-solid fa-code"></i> Konten Halaman Tautan yang Diekstrak</h4>
+                        <p><strong>Judul:</strong> <span id="scraped-title">...</span></p>
+                        <p><strong>Deskripsi:</strong> <span id="scraped-snippet">...</span></p>
+                    </div>
+
+                    <!-- Extra OCR extracted text if image query -->
+                    <div class="ocr-meta-box" id="ocr-meta-box" style="display: none;">
+                        <h4><i class="fa-solid fa-eye-dropper"></i> Teks Hasil Pemindaian Gambar (OCR)</h4>
+                        <p id="ocr-extracted-text">...</p>
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+        <!-- Bottom Section: Primary Knowledge Base Dashboard -->
+        <section class="panel glass-panel kb-panel">
+            <div class="kb-panel-header">
+                <div class="kb-header-title">
+                    <h2><i class="fa-solid fa-server"></i> Basis Pengetahuan Utama (GitHub Issues #2 Cache)</h2>
+                    <p>Daftar klaim valid dan hoax terverifikasi yang tersinkronisasi secara dinamis melalui GitHub API.</p>
+                </div>
+                <div class="kb-sync-controls">
+                    <div class="sync-date-info">
+                        <span class="sync-label">Pembaruan Terakhir:</span>
+                        <span class="sync-time" id="kb-sync-time">{{ last_sync }}</span>
+                    </div>
+                    <button class="sync-btn" id="sync-kb-btn">
+                        <i class="fa-solid fa-rotate"></i> Sinkronkan dengan GitHub
+                    </button>
+                </div>
+            </div>
+
+            <!-- KB Table List -->
+            <div class="table-container">
+                <table class="kb-table" id="kb-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Judul Kasus</th>
+                            <th>Isi Klaim Isu</th>
+                            <th>Status Kesimpulan</th>
+                            <th>Akurasi</th>
+                            <th>Sumber Rujukan</th>
+                            <th>Tindakan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kb-table-body">
+                        <!-- Loading spinner for table -->
+                        <tr>
+                            <td colspan="7" class="text-center py-4">
+                                <i class="fa-solid fa-spinner fa-spin"></i> Memuat data basis pengetahuan lokal...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Anti Fitnah Platform. Didesain secara premium untuk Build With AI 2026.</p>
+        </footer>
+    </div>
+
+    <!-- Main JavaScript Code -->
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

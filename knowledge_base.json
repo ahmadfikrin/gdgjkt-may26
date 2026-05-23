@@ -1,0 +1,66 @@
+{
+    "last_sync": "2026-05-23 15:56:50",
+    "total_count": 6,
+    "issues": [
+        {
+            "id": 1,
+            "title": "Jakarta Libur Nasional karena Pemilu Susulan 24 Mei 2026",
+            "claim": "Besok tanggal 24 Mei 2026 Jakarta akan libur nasional karena diadakannya pemilu susulan pilkada.",
+            "status": "🛑 HOAX",
+            "confidence": 98,
+            "explanation": "Kementerian Ketenagakerjaan menyatakan tidak ada keputusan presiden mengenai libur nasional pada tanggal 24 Mei 2026. Pemilu susulan hanya diadakan di TPS tertentu dan tidak meliburkan provinsi Jakarta secara keseluruhan.",
+            "source": "https://www.komdigi.go.id/berita/berita-hoaks",
+            "category": "Pemerintahan"
+        },
+        {
+            "id": 2,
+            "title": "Bantuan Sosial Tunai 10 Juta Rupiah melalui Link Telegram",
+            "claim": "Pemerintah membagikan bantuan sosial tunai sebesar 10 juta rupiah bagi yang bergabung ke grup Telegram ini.",
+            "status": "🛑 HOAX",
+            "confidence": 95,
+            "explanation": "Kementerian Sosial menegaskan bahwa penyaluran BST hanya dilakukan melalui PT Pos Indonesia dan Himbara. Tidak ada pendaftaran bansos melalui link grup Telegram atau WhatsApp informal.",
+            "source": "https://www.komdigi.go.id/berita/berita-hoaks",
+            "category": "Sosial & Ekonomi"
+        },
+        {
+            "id": 3,
+            "title": "Vaksin Booster Mengandung Chip Magnetik Pelacak",
+            "claim": "Vaksin booster mengandung chip magnetik kecil untuk melacak pergerakan warga.",
+            "status": "🛑 HOAX",
+            "confidence": 99,
+            "explanation": "Kementerian Kesehatan dan WHO menegaskan kandungan vaksin sepenuhnya berisi bahan aktif antigen dan bahan penstabil standar medis. Logam magnetik atau mikrochip pelacak tidak mungkin dimasukkan ke dalam jarum suntik vaksin.",
+            "source": "https://turnbackhoax.id/",
+            "category": "Kesehatan"
+        },
+        {
+            "id": 4,
+            "title": "Gempa Megathrust Guncang Selat Sunda Malam Ini Kekuatan 9.5 SR",
+            "claim": "Akan terjadi gempa bumi dahsyat megathrust di Selat Sunda berkekuatan 9.5 SR pada malam ini pukul 22.00 WIB.",
+            "status": "🛑 HOAX",
+            "confidence": 97,
+            "explanation": "BMKG menegaskan gempa bumi tidak dapat diprediksi secara tepat kapan waktu terjadinya. Prediksi waktu spesifik jam dan kekuatan gempa megathrust malam ini adalah hoaks dan disinformasi.",
+            "source": "https://turnbackhoax.id/",
+            "category": "Bencana Alam"
+        },
+        {
+            "id": 5,
+            "title": "Pendaftaran KIP Kuliah Tahun 2026 Resmi Dibuka Kemendikbudristek",
+            "claim": "Pendaftaran Kartu Indonesia Pintar Kuliah (KIP-Kuliah) tahun 2026 resmi dibuka mulai hari ini.",
+            "status": "✅ FAKTA",
+            "confidence": 95,
+            "explanation": "Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi mengumumkan secara resmi pembukaan KIP Kuliah bagi lulusan SMA/SMK sederajat berprestasi dari keluarga kurang mampu melalui portal kip-kuliah.kemdikbud.go.id.",
+            "source": "https://tirto.id/",
+            "category": "Pendidikan"
+        },
+        {
+            "id": 6,
+            "title": "Pendaftaran Beasiswa LPDP Tahap 1 Tahun 2026 Dibuka",
+            "claim": "Kementerian Keuangan resmi membuka pendaftaran beasiswa LPDP Tahap 1 tahun 2026 mulai kuartal pertama.",
+            "status": "✅ FAKTA",
+            "confidence": 96,
+            "explanation": "Lembaga Pengelola Dana Pendidikan (LPDP) resmi membuka seleksi pendaftaran program beasiswa Magister dan Doktor Tahap 1 tahun 2026 secara daring bagi seluruh warga negara Indonesia.",
+            "source": "https://tirto.id/",
+            "category": "Pendidikan"
+        }
+    ]
+}
